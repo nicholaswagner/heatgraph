@@ -1,0 +1,21 @@
+[project]
+name = "heatgraph"
+version = "0.1.0"
+description = "A terminal heatgraph renderer for matrix-style data."
+readme = "README.md"
+authors = [
+    { name = "Nicholas Wagner", email = "hello@nicholaswagner.dev" }
+]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.11.6,<0.12.0"]
+build-backend = "uv_build"
+
+[project.scripts]
+heatgraph = "heatgraph.cli:main"
+heatgraph-helpers = "heatgraph.helpers.__main__:main"
