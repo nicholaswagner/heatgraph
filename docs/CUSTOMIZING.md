@@ -103,7 +103,7 @@ clamped to the last entry.
 | `terminal`    | `░ █`               |
 
 
-![glyph presets sampler](../images/glyphs.png)
+![glyph presets sampler](https://raw.githubusercontent.com/nicholaswagner/heatgraph/main/images/glyphs.png)
 
 A glyph list shorter than the color list is fine — the last glyph repeats.
 

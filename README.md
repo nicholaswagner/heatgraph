@@ -3,7 +3,7 @@
   <p>A terminal heat-map renderer for people who actually like their terminal.</p>
 </div>
 
-![hero image for heatgraph showing some visualized data](images/hero.png)
+![hero image for heatgraph showing some visualized data](https://raw.githubusercontent.com/nicholaswagner/heatgraph/main/images/hero.png)
 
 ## Overview
 
@@ -25,43 +25,49 @@ echo '{"values":[[1,2,3,4,5]],"cols":["a","b","c","d","e"]}' | uvx heatgraph
 ```
 
 <div align="center">
-  <img src="images/quick-start.png" height="150px" width="auto">
+  <img src="https://raw.githubusercontent.com/nicholaswagner/heatgraph/main/images/quick-start.png" height="150px" width="auto">
 </div>
 
 ## Examples
 
+> The helper commands live in the same package but under a different entry
+> point. With `uvx`, that means using `--from heatgraph`:
+
 **Visualize your GitHub contributions**
 
 ```bash
-uvx heatgraph-helpers gh-contributions <username> --theme github-dark
+uvx --from heatgraph heatgraph-helpers gh-contributions <username> --theme github-dark
 ```
-![an example github contribution graph](images/gh-contributions.png)
+
+![an example github contribution graph](https://raw.githubusercontent.com/nicholaswagner/heatgraph/main/images/gh-contributions.png)
 
 **Track a workout routine**
 
 ```bash
-uvx heatgraph-helpers habit-tracker examples/workout-log.md --simple
+uvx --from heatgraph heatgraph-helpers habit-tracker examples/workout-log.md --simple
 ```
-![image of a workout log](images/helpers-habit-tracker.png)
+
+![image of a workout log](https://raw.githubusercontent.com/nicholaswagner/heatgraph/main/images/helpers-habit-tracker.png)
 
 **Track your sleep quality**
 
 ```bash
-uvx heatgraph-helpers habit-tracker examples/sleep.log \
+uvx --from heatgraph heatgraph-helpers habit-tracker examples/sleep.log \
   --theme nord --glyphs terminal --normalize quantile \
   --message '[COUNT] nights logged' \
   --legend 'poor  [GRADIENT]  excellent'
 ```
 
-![image of a sleep tracker](images/helpers-sleep-tracker.png)
+![image of a sleep tracker](https://raw.githubusercontent.com/nicholaswagner/heatgraph/main/images/helpers-sleep-tracker.png)
 
 **Live data with `--follow`**
 
 ```bash
 # Conway's Game of Life as the "live data"
-uvx heatgraph-helpers game-of-life | uvx heatgraph --follow --glyphs terminal
+uvx --from heatgraph heatgraph-helpers game-of-life | uvx heatgraph --follow --glyphs terminal
 ```
-![a gif demonstrating the follow argument usage](images/game-of-life.png)
+
+![a gif demonstrating the follow argument usage](https://raw.githubusercontent.com/nicholaswagner/heatgraph/main/images/game-of-life.png)
 
 
 ## Features
